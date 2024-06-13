@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import UseAuth from "../../../Hook/UseAuth";
-import { API_URL } from "../../../constant";
 import { Helmet } from "react-helmet";
+import UseAuth from "../../../Hook/UseAuth";
 import useAxiosSecure from "../../../Hook/useAxiosSecure";
 
 const RecommendationsForMe = () => {
@@ -25,7 +24,7 @@ const RecommendationsForMe = () => {
             <Helmet>
                 <title>Recommendations For Me - Gadgets Stock React Template</title>
             </Helmet>
-            <h1 className="text-2xl pb-5 font-bold">Recommendations For Me <span className='bg-[#ff8717] text-white  text-base px-4 rounded-3xl'>{recommendation.length}</span> </h1>
+            <h1 className="text-2xl pb-5 font-bold">Recommendations For Me <span className='bg-[#ff8717] text-white  text-base px-4 rounded-3xl'>{recommendation?.length}</span> </h1>
 
             <div className="overflow-x-auto">
                 <table className="table">
@@ -41,16 +40,16 @@ const RecommendationsForMe = () => {
                     </thead>
                     {
                         recommendation?.map(data => (
-                            <tbody key={data._id}>
+                            <tbody key={data?._id}>
                                 <tr>
                                     <td className='border text-center'>
-                                        <img className="w-16" src={data.imageUrl} alt="" />
+                                        <img className="w-16" src={data?.imageUrl} alt="" />
                                     </td>
-                                    <td className='border capitalize'>{data.queryCreator.userName}</td>
-                                    <td className='border'>{data.queryTitle}</td>
-                                    <td className='border'>{data.productName}</td>
-                                    <td className='border'>{data.recommendedProductName}</td>
-                                    <td className='border'>{data.recommendationReason.substring(0, 160)}</td>
+                                    <td className='border capitalize'>{data?.queryCreator?.userName}</td>
+                                    <td className='border'>{data?.queryTitle}</td>
+                                    <td className='border'>{data?.productName}</td>
+                                    <td className='border'>{data?.recommendedProductName}</td>
+                                    <td className='border'>{data?.recommendationReason?.substring(0, 160)}</td>
                                 </tr>
                             </tbody>
                         ))

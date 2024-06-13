@@ -36,11 +36,11 @@ const QueriesCard = ({ data, layout }) => {
                     <div className="card-body">
                         <p className="text-gray-500 flex items-center gap-2 font-Jost"><span className="text-lg"><CiCalendarDate /></span> {issueDate}</p>
                         <h2 className="text-xl card-title font-Jost capitalize my-1 font-medium" title={queryTitle}>{queryTitle?.substring(0, 30)}...</h2>
-                        {boycottingReason && (
-                            <p className="pb-2" title={boycottingReason}>Alternation Reason:
-                                <span className="font-semibold">{boycottingReason?.substring(0, 50)}...</span>
-                            </p>
-                        )}
+
+                        {/* <p className="pb-2" title={boycottingReason}>Alternation Reason:
+                            <span className="font-semibold">{boycottingReason?.substring(0, 50)}...</span>
+                        </p> */}
+
                         <div className="flex items-center gap-6 pb-4 border-b">
                             <p className="">Brand Name: <span className="font-semibold"> <br /> {brandName}</span></p>
                             <p className="">Product Name: <span className="font-semibold"> <br /> {productName?.substring(0, 30)}</span></p>
