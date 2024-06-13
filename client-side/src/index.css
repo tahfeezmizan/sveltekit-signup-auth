@@ -1,0 +1,28 @@
+/* jost font  */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+/* roboto font  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.homeBanner {
+    height: calc(100vh - 120px);
+
+    @media (max-width: 640px) {
+        height: calc(100vh - 200px);
+    }
+
+    @media (min-width: 641px) and (max-width: 768px) {
+        height: calc(100vh - 100px);
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        height: calc(100vh - 120px);
+    }
+
+    @media (min-width: 1025px) {
+        height: calc(100vh - 120px);
+    }
+}
